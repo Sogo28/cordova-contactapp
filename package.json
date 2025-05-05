@@ -1,6 +1,6 @@
 {
-  "name": "sn.esp.dgi.dic3.mobiledev.todoapp",
-  "displayName": "To do app",
+  "name": "sn.esp.dgi.dic3.mobiledev.contactel",
+  "displayName": "Contactel",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
