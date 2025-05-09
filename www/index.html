@@ -8,25 +8,123 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="lib/jquery.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
     <script src="js/index.js"></script>
-    <title>Document</title>
+    <title>Contactel</title>
 </head>
 
 <body>
-    <div data-role="page">
-        <div data-role="header">
-            <h1>My App</h1>
+    <!-- Home page -->
+    <div data-role="page" id="homePage" class="homePage">
+
+        <div class="sectionHeader ui-content">
+            <div class="">
+                <h2>Téléphone</h2>
+                <p>Chargement des contacts...</p>
+            </div>
+            <div class="addButtonContainer">
+                <a href="#addContactPage" class="addButton">+</a>
+            </div>
         </div>
 
         <div role="main" class="ui-content">
-            <h1>Welcome to the App</h1>
-            <p>This is a simple mobile app using jQuery Mobile.</p>
-        </div>
-
-        <div data-role="footer" data-position="fixed">
-            <h1>Aurelius &copy; 2025</h1>
+            <ul id="contactList" data-role="listview" data-filter="true"
+                data-filter-placeholder="Rechercher un contact...">
+                <!-- Les contacts seront chargés dynamiquement ici -->
+            </ul>
         </div>
     </div>
+
+    <!-- Contact Details Page -->
+    <div data-role="page" id="contactDetailsPage">
+        <div data-role="header">
+            <a href="#homePage" data-role="button" data-icon="back" data-iconpos="notext" class="backButton"></a>
+            <h2>Détails du contact</h2>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="contactDetailsHeader">
+                <img src="public/images/contact.png" alt="Contact" class="contactDetailsAvatar">
+            </div>
+            <div class="contactDetailsInfo">
+                <div class="contactDetailsItem">
+                    <p>Téléphone</p>
+                    <h3>Chargement...</h3>
+                </div>
+                <div class="contactDetailsItem">
+                    <p>Email</p>
+                    <h3>Chargement...</h3>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+            <a href="#" data-role="button" data-icon="edit" data-iconpos="notext" class="updateButton"></a>
+            <a href="#" data-role="button" data-icon="delete" data-iconpos="notext" class="deleteButton"></a>
+        </div>
+    </div>
+
+    <!-- Add a form for creating a new contact -->
+    <div data-role="page" id="addContactPage">
+        <div data-role="header">
+            <a href="#homePage" data-role="button" data-icon="back" data-iconpos="notext" class="backButton"></a>
+            <h2>Ajouter un contact</h2>
+        </div>
+
+        <div role="main" class="ui-content">
+            <form id="addContactForm">
+                <div class="ui-field-contain">
+                    <label for="contactName">Nom:</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="contactPhone">Téléphone:</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail">
+                </div>
+
+                <button type="button" id="saveContactButton"
+                    class="ui-btn ui-corner-all ui-shadow ui-btn-b">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Contact Page -->
+    <div data-role="page" id="editContactPage">
+        <div data-role="header">
+            <a href="#contactDetailsPage" data-role="button" data-icon="back" data-iconpos="notext"
+                class="backButton"></a>
+            <h2>Modifier le contact</h2>
+        </div>
+
+        <div role="main" class="ui-content">
+            <form id="editContactForm">
+                <div class="ui-field-contain">
+                    <label for="editContactName">Nom:</label>
+                    <input type="text" id="editContactName" name="editContactName" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="editContactPhone">Téléphone:</label>
+                    <input type="tel" id="editContactPhone" name="editContactPhone" required>
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="editContactEmail">Email:</label>
+                    <input type="email" id="editContactEmail" name="editContactEmail">
+                </div>
+
+                <button type="button" id="updateContactButton" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Mettre à
+                    jour</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>

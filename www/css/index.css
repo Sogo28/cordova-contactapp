@@ -1,0 +1,180 @@
+body,
+* {
+  text-shadow: none !important;
+  box-sizing: border-box;
+}
+
+/* Page d'accueil */
+.homePage {
+  background-color: white !important;
+  color: black;
+}
+
+.sectionHeader {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 12px !important;
+}
+
+/* Liste des contacts */
+.contactListItem {
+  margin: 12px !important;
+}
+
+.contactListItem a {
+  background: none !important;
+  display: flex !important;
+  flex-direction: row !important;
+  border: 0px !important;
+  align-items: center !important;
+}
+
+.contactAvatar {
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #0270c3 !important;
+  color: white !important;
+  border-radius: 100% !important;
+}
+
+.contactInfo {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  margin-left: 10px !important;
+  color: black !important;
+  letter-spacing: 1px !important;
+}
+
+.addButtonContainer {
+  width: 100%;
+  display: flex !important;
+  justify-content: end !important;
+  align-items: center !important;
+}
+
+.addButton {
+  width: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #0353a5 !important;
+  color: white !important;
+  border-radius: 100% !important;
+  text-decoration: none !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+/* Page de détails du contact */
+#contactDetailsPage {
+  background-color: white !important;
+}
+
+.backButton {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #333232 !important;
+  color: white !important;
+  border-radius: 100% !important;
+  text-decoration: none !important;
+  margin-left: 12px !important;
+}
+
+.contactDetailsAvatar {
+  width: 10rem !important;
+  height: 10rem !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+.contactDetailsHeader {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 12px !important;
+}
+
+.contactDetailsInfo {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 12px !important;
+}
+
+.contactDetailsItem {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 12px !important;
+  padding: 8px 12px !important;
+  background-color: #f9f9f9 !important;
+  border-radius: 8px !important;
+}
+
+.contactDetailsItem h3,
+.contactDetailsItem p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #333232 !important;
+  text-shadow: none !important;
+}
+
+.contactDetailsItem p {
+  color: #666 !important;
+  font-size: 0.9em !important;
+}
+
+.updateButton {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #0270c3 !important;
+  color: white !important;
+  border-radius: 100% !important;
+  text-decoration: none !important;
+}
+
+.deleteButton {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #ff004f !important;
+  color: white !important;
+  border-radius: 100% !important;
+  text-decoration: none !important;
+}
+
+/* Formulaires d'ajout et d'édition */
+#addContactPage,
+#editContactPage {
+  background-color: white !important;
+}
+
+.ui-field-contain {
+  margin-bottom: 1rem !important;
+}
+
+/* Rendre l'appli plus réactive */
+@media (max-width: 480px) {
+  .contactDetailsAvatar {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+
+  .ui-content {
+    padding: 10px !important;
+  }
+}
